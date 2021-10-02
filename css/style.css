@@ -1,0 +1,85 @@
+.block {
+	width: 1160px;
+	height: 400px;
+	background-color: red;
+/*	margin-left: auto;
+	margin-right: auto;*/
+	margin: 0 auto;
+}
+.title {
+	text-align: center;
+}
+
+.wraper {
+	width: 600px;
+	height: 600px;
+	background-color: lightblue;
+	position: relative;
+	/*transition-property: all;
+	transition-duration: 2s;
+	transition-timing-function: linear;
+	transition-delay: 2s;*/
+	transition: all 2s linear 2s;
+}
+.child-box {
+	width: 150px;
+	height: 150px;
+	background-color: blue;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	transition: all 0.5s linear;
+}
+
+/*Hover examples*/
+.wraper:hover {
+	background-color: yellow;
+}
+.child-box:hover {
+	background-color: green;
+	transform: translate(-50%, -50%) rotate(0deg);
+}
+.title:hover {
+	color: red;
+	/*font-size: 25px;*/
+}
+/*.wraper:hover .child-box {
+	background-color: pink;
+	width: 300px;
+}*/
+.filter-image:hover {
+	 filter: grayscale(100%);
+}
+
+/*keyframe example image*/
+.image-animation {
+	height: 100px;
+	animation: animationimagetransform 5s infinite 2s alternate;
+	/*position: absolute;*/
+}
+.keyframe-block {
+	/*position: relative;*/
+	height: 150px;
+}
+
+
+/*keyframes*/
+/*@keyframes animationimage {
+	0% {left: 0; transform: rotate(0deg);}
+	20% {left: 200px;  transform: rotate(45deg);}
+	40% {left: 400px;  transform: rotate(360deg);}
+	60% {left: 600px;  transform: rotate(45deg);}
+	80% {left: 800px;  transform: rotate(360deg);}
+	100% {left: 1000px;  transform: rotate(45deg);}
+}*/
+
+
+@keyframes animationimagetransform {
+	0% {transform:translateX(0) rotate(0deg);}
+	20% {transform:translateX(200px) rotate(45deg);}
+	40% {transform:translateX(400px) rotate(360deg);}
+	60% {transform:translateX(600px) rotate(45deg);}
+	80% {transform:translateX(800px) rotate(360deg);}
+	100% {transform:translateX(1000px) rotate(45deg);}
+}
